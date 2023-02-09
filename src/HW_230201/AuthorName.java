@@ -30,6 +30,6 @@ public class AuthorName {
     }
 
     public String toString() {
-        return " name: " + this.firstName + " sur name: " + this.secondName;
+        return " name: " + firstName + " sur name: " + secondName;
     }
 }

@@ -1,5 +1,7 @@
 package HW_230201;
 
+import java.util.Objects;
+
 public class BookName {
     private String bookName;
     private AuthorName author;
@@ -38,8 +40,21 @@ public class BookName {
         this.author = authorName;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BookName bookName1 = (BookName) o;
+        return yearBook == bookName1.yearBook && Objects.equals(bookName, bookName1.bookName) && Objects.equals(author, bookName1.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(bookName, author, yearBook);
+    }
+
     public String toString() {
-        return "Book name: " + this.bookName + this.author + " year of publishing: "
-                + this.yearBook;
+        return "Book name: " + bookName + author + " year of publishing: "
+                + yearBook;
     }
 }
