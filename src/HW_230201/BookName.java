@@ -4,13 +4,13 @@ import java.util.Objects;
 
 public class BookName {
     private String bookName;
-    private AuthorName author;
+    private Author author;
     private int yearBook;
 
     public BookName() {
     }
 
-    public BookName(String bookName, AuthorName authorName, int yearBook) {
+    public BookName(String bookName, Author authorName, int yearBook) {
         this.bookName = bookName;
         this.author = authorName;
         this.yearBook = yearBook;
@@ -20,7 +20,7 @@ public class BookName {
         return this.bookName;
     }
 
-    public AuthorName getAuthorName() {
+    public Author getAuthorName() {
         return this.author;
     }
 
@@ -36,7 +36,7 @@ public class BookName {
         this.bookName = bookName;
     }
 
-    public void setAuthorName(AuthorName authorName) {
+    public void setAuthorName(Author authorName) {
         this.author = authorName;
     }
 
